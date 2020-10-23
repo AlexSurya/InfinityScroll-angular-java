@@ -1,0 +1,29 @@
+
+<!-- <mat-card> -->
+
+  <!-- <div class="container"> -->
+    <div infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()"  [scrollWindow]="false"
+    style="height: 600px; overflow-y: scroll;">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of books" (click)="rowClick(book)">
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.price}}</td>
+            <td>{{book.rating}}</td>
+            <td> <img style="height: 35px;" src="{{book.imageUrl}}" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  <!-- </div> -->
+<!-- </mat-card> -->
